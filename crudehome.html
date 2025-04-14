@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Wear the Movement. Fund the Future. Support fashion that fuels community events in Central Canada."/>
+  <title>Wear the Movement</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <img src="crude.png" alt="CA Logo" class="logo" />
+    <h1>Wear the Movement.<br>Fuel the Future.</h1>
+    <div class="buttons">
+      <a href="#shop" class="btn primary">Shop Now</a>
+      <a href="#invest" class="btn secondary">Invest in Central Canada</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About the Movement</h2>
+    <p>Our mission: promoting fashion with purpose. Every purchase helps to support and host future events in Central Canada.</p>
+  </section>
+
+  <section class="sections">
+    <div class="section">
+      <h3>Shop</h3>
+      <p>Explore our clothing line and make a statement with style.</p>
+      <a href="#shop" class="link">Shop Now →</a>
+    </div>
+    <div class="section">
+      <h3>Fuel the Future</h3>
+      <p>Join us in bringing vibrant, community-driven events to Central Canada.</p>
+      <a href="#invest" class="link">Learn More →</a>
+    </div>
+  </section>
+  <section class="products" id="shop">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="shirt1.jpg" alt="Urban Tee" />
+        <h4>Urban Tee</h4>
+        <p>$35.00</p>
+        <a href="#" class="btn small">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="hoodie1.jpg" alt="Heritage Hoodie" />
+        <h4>Heritage Hoodie</h4>
+        <p>$60.00</p>
+        <a href="#" class="btn small">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="cap1.jpg" alt="Unity Cap" />
+        <h4>Unity Cap</h4>
+        <p>$25.00</p>
+        <a href="#" class="btn small">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="jacket1.jpg" alt="Northern Windbreaker" />
+        <h4>Northern Windbreaker</h4>
+        <p>$80.00</p>
+        <a href="#" class="btn small">Buy Now</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Investment Interest Form -->
+<section class="invest-section" id="invest">
+  <h2>Invest in Central Canada</h2>
+  <p>We're looking for partners to help grow community-driven events. Fill out the form to express your interest.</p>
+  <form class="invest-form" action="invest.php" method="POST">
+
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <textarea name="message" rows="4" placeholder="Tell us how you'd like to be involved..."></textarea>
+    <button type="submit" class="btn primary">Submit Interest</button>
+  </form>
+</section>
+
+<!-- Event Teaser -->
+<section class="event-teaser">
+  <h2>Upcoming in Central Canada</h2>
+  <p>We’re preparing fashion shows, pop-ups, and cultural gatherings that empower local talent. Be the first to know.</p>
+  <img src="event-teaser.jpg" alt="Event preview" class="event-img" />
+</section>
+
+<!-- Email Sign-up -->
+<section class="newsletter">
+  <h2>Stay in the Loop</h2>
+  <p>Sign up for early access, product drops, and exclusive event invites.</p>
+  <form class="newsletter-form" action="newsletter.php" method="POST">
+
+    <input type="email" placeholder="Your email address" required />
+    <button type="submit" class="btn secondary">Sign Up</button>
+  </form>
+</section>
+
+</body>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="crude2.png" alt="Campaign Logo" />
+      <p>Wear the Movement. Fund the Future.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#invest">Invest</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Connect</h4>
+      <div class="social-icons">
+        <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
+        <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
+        <a href="#"><img src="icons/twitter.svg" alt="Twitter" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Crude. All rights reserved.</p>
+  </div>
+</footer>
+
+</html>
