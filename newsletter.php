@@ -1,17 +1,35 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "jasrajsinghw@email.com";
-    $subject = "New Newsletter Signup";
-    $email = htmlspecialchars($_POST['email']);
+    $email = $_POST['email'];
 
-    $body = "Email: $email";
-    $headers = "From: $email";
+    $mail = new PHPMailer(true);
+    try {
+        // Server settings
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';  // Your SMTP server
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'your@gmail.com';  // Your email
+        $mail->Password   = 'your_app_password';  // App password
+        $mail->SMTPSecure = 'tls';
+        $mail->Port       = 587;
 
-    if (mail($to, $subject, $body, $headers)) {
+        // Recipient & Content
+        $mail->setFrom('your@gmail.com', 'Newsletter');
+        $mail->addAddress('your@email.com');
+        $mail->Subject = 'New Newsletter Signup';
+        $mail->Body    = "New email signup: $email";
+
+        $mail->send();
         echo "Thank you for signing up!";
-    } else {
-        echo "Something went wrong. Please try again.";
+    } catch (Exception $e) {
+        echo "Message could not be sent. Error: {$mail->ErrorInfo}";
     }
 }
 ?>
-
