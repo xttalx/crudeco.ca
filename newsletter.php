@@ -21,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port       = 587;
 
         // Recipient & Content
-        $mail->setFrom('your@gmail.com', 'Newsletter');
-        $mail->addAddress('your@email.com');
+        $mail->setFrom('jasrajsinghw@gmail.com', 'Newsletter');
+        $mail->addAddress('jasrajsinghw@email.com');
         $mail->Subject = 'New Newsletter Signup';
         $mail->Body    = "New email signup: $email";
 
