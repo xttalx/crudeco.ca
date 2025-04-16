@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Recipient & Content
         $mail->setFrom('jasrajsinghw@gmail.com', 'Newsletter');
-        $mail->addAddress('jasrajsinghw@email.com');
+        $mail->addAddress('jasrajsinghw@gmail.com');
         $mail->Subject = 'New Newsletter Signup';
         $mail->Body    = "New email signup: $email";
 
